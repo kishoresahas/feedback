@@ -345,6 +345,15 @@
 					}
 				});
 
+				$(document).on('click', '#feedback-add-screenshot', function () {
+						var includeSreenShot = $("#feedback-add-screenshot").is(":checked");
+						if (includeSreenShot) {
+							$("#feedback-welcome-next").text("Next")
+						} else {
+							$("#feedback-welcome-next").text("Submit")
+						}
+				});
+
 				$(document).on('mouseenter mouseleave', '.feedback-helper', function (e) {
 					if (drag)
 						return;
